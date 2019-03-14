@@ -14,7 +14,7 @@ This app that is the direct message function for Rails.
 
 ##
 
-```
+```sh
 % rails g devise:install
 % rails g devise:controllers Users
 % rails g devise user name:string
@@ -40,3 +40,33 @@ class User < ApplicationRecord
   has_many :entries, dependent: :destroy
 end
 ```
+
+```rb
+# app/model/entry.rb
+class Entry < ApplicationRecord
+  belongs_to :user
+  belongs_to :room
+end
+```
+
+```rb
+# app/model/room.rb
+class Room < ApplicationRecord
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
+end
+```
+
+```rb
+class Message < ApplicationRecord
+  belongs_to :user
+  belongs_to :room
+end
+```
+
+```sh
+$ rails g controller users index show
+$ rails g controller rooms
+$ rails g controller messages
+```
+
