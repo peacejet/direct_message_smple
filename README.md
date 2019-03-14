@@ -12,16 +12,23 @@ This app that is the direct message function for Rails.
 
 `gem "devise"`
 
-##
+## Devise
 
 ```sh
 % rails g devise:install
 % rails g devise:controllers Users
 % rails g devise user name:string
 % rails g devise:views
+```
+
+## Migrate
+
+```sh
 % rails db:create
 % rails db:migrate
 ```
+
+## Models
 
 ```rb
 rails g model room name:string
@@ -63,6 +70,8 @@ class Message < ApplicationRecord
   belongs_to :room
 end
 ```
+
+## Controllers
 
 ```sh
 $ rails g controller users index show
