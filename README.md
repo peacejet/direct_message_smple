@@ -4,9 +4,11 @@ This app that is the direct message function for Rails.
 
 ## Building Step
 
-- % bundle init
-- % bundle install --path vendor/bundle --jobs=4
-- % bundle exec rails new . -B -T -C -d postgresql --skip-turbolinks
+```sh
+% bundle init
+% bundle install --path vendor/bundle --jobs=4
+% bundle exec rails new . -B -T -C -d postgresql --skip-turbolinks
+```
 
 ## Add Devise
 
@@ -74,8 +76,8 @@ end
 ## Controllers
 
 ```sh
-$ rails g controller users index show
-$ rails g controller rooms
-$ rails g controller messages
+% rails g controller users index show
+% rails g controller rooms
+% rails g controller messages
 ```
 
