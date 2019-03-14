@@ -32,10 +32,10 @@ This app that is the direct message function for Rails.
 
 ## Models
 
-```rb
-rails g model room name:string
-rails g model entry user:references room:references
-rails g model message user:references room:references content:text
+```bash
+% rails g model room name:string
+% rails g model entry user:references room:references
+% rails g model message user:references room:references content:text
 ```
 
 ```rb
