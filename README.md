@@ -2,6 +2,15 @@
 
 This app that is the direct message function for Rails.
 
+## Versions
+```
+% ruby -v
+2.6.0
+
+% rails -v
+5.2.2
+```
+
 ## Building Step
 
 ```sh
