@@ -1,6 +1,11 @@
 <h1>DMサンプルアプリ</h1>
 <% if user_signed_in? %>
 <h2>Hello <%= current_user.email %></h2>
+  <% @rooms.each do |room| %>
+    <% if room.messages.present? %>
+      <%= room.messages.order(created_at: :desc).take.content %>
+    <% end %>
+  <% end %>
   <% @users.each do |u| %>
   <p><a href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
   <hr>
